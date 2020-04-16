@@ -1,20 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class SalesAssociate extends Employee{
     protected String employeeName;
     protected SalesManager manager;
     protected long salesID;
+    private ArrayList<Client> list;
 
-    public SalesAssociate (employeeName, manager, salesID){
+    public SalesAssociate (String employeeName, SalesManager manager, long salesID){
         this.employeeName = employeeName;
         this.manager = manager;
         this.salesID = salesID;
+        list = new ArrayList<Client>();
     }
 
-    protected getSalesManager() {
-        return SalesManager;
+    protected SalesManager getSalesManager() {
+        return manager;
     }
 
-    protected void setSalesManager(Protected salesManager) {
-        SalesManager = salesManager;
+    protected void setSalesManager(SalesManager salesManager) {
+        manager = salesManager;
     }
 
     protected long getSalesID() {
@@ -27,5 +32,16 @@ public class SalesAssociate extends Employee{
 
     private double bonus(){
         return 500*(getClients().size());
+    }
+
+    public boolean addClient(Client client) {
+        boolean didAdd = list.add(client);
+        Collections.sort(list);
+        return didAdd;
+    }
+
+    public ArrayList<Client> getClients()
+    {
+        return list;
     }
 }
