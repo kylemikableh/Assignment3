@@ -52,7 +52,21 @@ public class SalesAssociate extends Employee{
     }
 
     public void printSAInfo(){
-        System.out.println("SalesManager: " + this.getName() + " Sales Manager: " + this.getSalesManager() + " Clients: " + this.getClients());
+        System.out.println("Sales Associate: " + this.getName() + ". Sales Manager: " + this.getSalesManager() + " Clients: " + this.getClientsToString());
+    }
+
+    public String getClientsToString(){
+        String string = "";
+        for(int i = 0; i < list.size(); i++)
+        {
+            Client e = list.get(i);
+            string+= e;
+            if(i != list.size() - 1)
+            {
+                string+= ", ";
+            }
+        }
+        return string;
     }
 
     public String toString() {

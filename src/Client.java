@@ -44,7 +44,7 @@ public class Client implements Comparable<Client> {
 
 
     public void printClientInfo(){
-        System.out.println("Client: " + this.getClientName() + " Sales Employee: " + this.getEmployee());
+        System.out.println("Client: " + this.getClientName() + ". Sales Employee: " + this.getEmployee());
     }
 
     public String toString() {

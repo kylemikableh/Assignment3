@@ -38,16 +38,16 @@ public class Main {
         Remi.setEmployee(Alex);
 
         //Part9
-        System.out.println(Sam.printSMInfo());
-        System.out.println(Charlie.printSMInfo());
-        System.out.println(Sven.printSAInfo());
-        System.out.println(Alex.printSAInfo());
+        Sam.printSMInfo();
+        Charlie.printSMInfo();
+        Sven.printSAInfo();
+        Alex.printSAInfo();
 
-        System.out.println(Jo.printClientInfo());
-        System.out.println(Riley.printClientInfo());
-        System.out.println(Peyton.printClientInfo());
-        System.out.println(Avery.printClientInfo());
-        System.out.println(Taylor.printClientInfo());
-        System.out.println(Remi.printClientInfo());
+        Jo.printClientInfo();
+        Riley.printClientInfo();
+        Peyton.printClientInfo();
+        Avery.printClientInfo();
+        Taylor.printClientInfo();
+        Remi.printClientInfo();
     }
 }

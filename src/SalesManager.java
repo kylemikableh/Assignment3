@@ -15,7 +15,7 @@ public class SalesManager extends Employee{
         employees = new ArrayList<Employee>();
         list = new ArrayList<Client>();
     }
-    protected long getName() {
+    protected String getName() {
         return employeeName;
     }
 
@@ -65,7 +65,35 @@ public class SalesManager extends Employee{
     }
 
     public void printSMInfo(){
-        System.out.println("SalesManager: " + this.getName() + " Employees: " + this.getEmployees() + " Clients: " + this.getClients());
+        System.out.println("Sales Manager: " + this.getName() + ". Employees: " + this.getEmployeesToString() + " Clients: " + this.getClientsToString());
+    }
+
+    public String getEmployeesToString(){
+        String string = "";
+        for(int i = 0; i < employees.size(); i++)
+        {
+            Employee e = employees.get(i);
+            string+= e;
+            if(i != employees.size() - 1)
+            {
+                string+= ", ";
+            }
+        }
+        return string;
+    }
+
+    public String getClientsToString(){
+        String string = "";
+        for(int i = 0; i < list.size(); i++)
+        {
+            Client e = list.get(i);
+            string+= e;
+            if(i != list.size() - 1)
+            {
+                string+= ", ";
+            }
+        }
+        return string;
     }
 
     public String toString() {
