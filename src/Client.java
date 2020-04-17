@@ -41,4 +41,8 @@ public class Client implements Comparable<Client> {
     public int compareTo(Client o) {
         return clientID;
     }
+
+    public String toString() {
+        return clientName + " " + clientID;
+    }
 }

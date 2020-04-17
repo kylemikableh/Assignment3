@@ -58,4 +58,8 @@ public class SalesManager extends Employee{
     {
         return list;
     }
+
+    public String toString() {
+        return employeeName;
+    }
 }

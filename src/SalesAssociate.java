@@ -44,4 +44,8 @@ public class SalesAssociate extends Employee{
     {
         return list;
     }
+
+    public String toString() {
+        return employeeName;
+    }
 }
