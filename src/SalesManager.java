@@ -33,6 +33,10 @@ public class SalesManager extends Employee{
         this.employees.add(employee);
     }
 
+    protected void setClients(ArrayList<Client> list) {
+        this.list = list;
+    }
+
     protected SalesManager getSalesManager() {
         return manager;
     }

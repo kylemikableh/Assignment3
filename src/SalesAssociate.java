@@ -28,6 +28,10 @@ public class SalesAssociate extends Employee{
         manager = salesManager;
     }
 
+    protected void setClients(ArrayList<Client> list) {
+        this.list = list;
+    }
+
     protected long getSalesID() {
         return salesID;
     }
