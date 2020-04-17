@@ -41,4 +41,9 @@ public class Client implements Comparable<Client> {
     public int compareTo(Client o) {
         return clientID;
     }
+
+
+    public void printClientInfo(){
+        System.out.println("Client: " + this.getClientName() + " Sales Employee: " + this.getEmployee());
+    }
 }

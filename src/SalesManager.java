@@ -15,6 +15,11 @@ public class SalesManager extends Employee{
         employees = new ArrayList<Employee>();
         list = new ArrayList<Client>();
     }
+    protected long getName() {
+        return employeeName;
+    }
+
+    protected void setName(long salesID) { }
 
     protected ArrayList<Employee> getEmployees() {
         return employees;
@@ -56,6 +61,10 @@ public class SalesManager extends Employee{
 
     public ArrayList<Client> getClients()
     {
-        return list;
+        return this.list;
+    }
+
+    public void printSMInfo(){
+        System.out.println("SalesManager: " + this.getName() + " Employees: " + this.getEmployees() + " Clients: " + this.getClients());
     }
 }
