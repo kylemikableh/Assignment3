@@ -65,7 +65,7 @@ public class SalesManager extends Employee{
     }
 
     public void printSMInfo(){
-        System.out.println("Sales Manager: " + this.getName() + ". Employees: " + this.getEmployeesToString() + " Clients: " + this.getClientsToString());
+        System.out.println("Sales Manager: " + this.getName() + ". Employees: " + this.getEmployeesToString() + ". Clients: " + this.getClientsToString());
     }
 
     public String getEmployeesToString(){
