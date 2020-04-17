@@ -3,10 +3,10 @@ public class Client implements Comparable<Client> {
     private String clientName;
     private Employee employee;
 
-    public Client (int clientID, String clientName, Employee employee) {
+    public Client (String clientName, int clientID) {
         this.clientID = clientID;
         this.clientName = clientName;
-        this.employee = employee;
+        this.employee = null;
     }
 
     protected Employee getEmployee() {

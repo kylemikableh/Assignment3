@@ -24,6 +24,10 @@ public class SalesManager extends Employee{
         this.employees = employees;
     }
 
+    protected void addEmployee(Employee employee) {
+        this.employees.add(employee);
+    }
+
     protected SalesManager getSalesManager() {
         return manager;
     }

@@ -1,29 +1,32 @@
+import java.util.ArrayList;
+
 public class Main {
-    //Part6 and 7
-    Client Jo = new Client("Jo",32);
-    Client Riley = new Client("Riley",473);
-    Client Peyton = new Client ("Peyton",555);
-    Client Avery = new Client("Avery",654);
-    Client Taylor = new Client("Taylor",840);
-    Client Remi = new Client("Remi",912);
 
-    SalesAssociate Sven = new SalesAssociate("Sven",Charlie,7);
-    SalesAssociate Alex = new SalesAssociate("Alex",Sam,20);
+    public static void main(String[] args) {
+        //Part6 and 7
+        Client Jo = new Client("Jo",32);
+        Client Riley = new Client("Riley",473);
+        Client Peyton = new Client ("Peyton",555);
+        Client Avery = new Client("Avery",654);
+        Client Taylor = new Client("Taylor",840);
+        Client Remi = new Client("Remi",912);
 
-    ArrayList<Employee> samEmployees = new ArrayList<Employee>();
-    samEmployees.add(Alex);
-    ArrayList<Employee> CharlieEmployees = new ArrayList<Employee>();
-    CharlieEmployees.add(Sven);
+        SalesAssociate Sven = new SalesAssociate("Sven",null,7);
+        SalesAssociate Alex = new SalesAssociate("Alex", null,20);
 
-    SalesManager Sam = new SalesManager("Sam",samEmployees,null,3);
-    SalesManager Charlie = new SalesManager("Charlie",CharlieEmployees,null,4);
+        SalesManager Sam = new SalesManager("Sam",null,3);
+        Sam.addEmployee(Alex);
+        SalesManager Charlie = new SalesManager("Charlie",null,4);
+        Charlie.addEmployee(Sven);
 
-    Sam.addClient(Jo);
-    Sam.addClient(Riley);
-    Charlie.addClient(Avery);
-    Sven.addClient(Peyton);
-    Alex.addClient(Taylor);
-    Alex.addClient(Remi);
+        Alex.setSalesManager(Sam);
+        Sven.setSalesManager(Charlie);
 
-
+        Sam.addClient(Jo);
+        Sam.addClient(Riley);
+        Charlie.addClient(Avery);
+        Sven.addClient(Peyton);
+        Alex.addClient(Taylor);
+        Alex.addClient(Remi);
+    }
 }
