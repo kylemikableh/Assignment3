@@ -22,11 +22,32 @@ public class Main {
         Alex.setSalesManager(Sam);
         Sven.setSalesManager(Charlie);
 
+        //Part8
         Sam.addClient(Jo);
         Sam.addClient(Riley);
         Charlie.addClient(Avery);
         Sven.addClient(Peyton);
         Alex.addClient(Taylor);
         Alex.addClient(Remi);
+
+        Jo.setEmployee(Sam);
+        Riley.setEmployee(Sam);
+        Peyton.setEmployee(Sven);
+        Avery.setEmployee(Charlie);
+        Taylor.setEmployee(Alex);
+        Remi.setEmployee(Alex);
+
+        //Part9
+        System.out.println(Sam.printSMInfo());
+        System.out.println(Charlie.printSMInfo());
+        System.out.println(Sven.printSAInfo());
+        System.out.println(Alex.printSAInfo());
+
+        System.out.println(Jo.printClientInfo());
+        System.out.println(Riley.printClientInfo());
+        System.out.println(Peyton.printClientInfo());
+        System.out.println(Avery.printClientInfo());
+        System.out.println(Taylor.printClientInfo());
+        System.out.println(Remi.printClientInfo());
     }
 }

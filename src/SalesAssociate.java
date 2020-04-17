@@ -14,6 +14,12 @@ public class SalesAssociate extends Employee{
         list = new ArrayList<Client>();
     }
 
+    protected String getName() {
+        return employeeName;
+    }
+
+    protected void setName(long salesID) { }
+
     protected SalesManager getSalesManager() {
         return manager;
     }
@@ -43,6 +49,10 @@ public class SalesAssociate extends Employee{
     public ArrayList<Client> getClients()
     {
         return list;
+    }
+
+    public void printSAInfo(){
+        System.out.println("SalesManager: " + this.getName() + " Sales Manager: " + this.getSalesManager() + " Clients: " + this.getClients());
     }
 
     public String toString() {
