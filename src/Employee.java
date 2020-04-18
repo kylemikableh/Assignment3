@@ -3,7 +3,12 @@ import java.util.ArrayList;
 public abstract class Employee {
     public abstract boolean addClient(Client client);
 
-    public abstract ArrayList<Client> getClients();
+    private ArrayList<Client> getClients()
+    {
+        return getClientHelper();
+    }
+
+    public abstract ArrayList<Client> getClientHelper();
 
     public abstract String toString();
 }

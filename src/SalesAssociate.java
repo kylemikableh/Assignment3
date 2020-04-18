@@ -41,7 +41,7 @@ public class SalesAssociate extends Employee{
     }
 
     private double bonus(){
-        return 500*(getClients().size());
+        return 500*(getClientHelper().size());
     }
 
     public boolean addClient(Client client) {
@@ -50,7 +50,7 @@ public class SalesAssociate extends Employee{
         return didAdd;
     }
 
-    public ArrayList<Client> getClients()
+    public ArrayList<Client> getClientHelper()
     {
         return list;
     }
